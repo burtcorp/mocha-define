@@ -1,0 +1,20 @@
+{
+  "name": "mocha-subject",
+  "version": "0.0.1",
+  "description": "Test subjects for Mocha.js",
+  "main": "lib/mocha_subject.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/burtcorp/mocha-subject.git"
+  },
+  "keywords": [
+    "testing",
+    "mocha"
+  ],
+  "author": "Johan Andersson",
+  "license": "BSD",
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "mocha": "~1.18.2"
+  }
+}

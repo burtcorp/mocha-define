@@ -1,13 +1,12 @@
 require('chai').should();
-require('../lib/mocha_subject');
+require('../lib/mocha_define');
 
-describe('mocha subject', function() {
+describe('mocha define', function() {
   beforeEach(function() {
     this.object = { foo: 'bar' };
   });
 
   describe('#subject', function() {
-
     subject(function() {
       return this.object;
     });

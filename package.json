@@ -1,11 +1,11 @@
 {
-  "name": "mocha-subject",
+  "name": "mocha-define",
   "version": "0.0.1",
-  "description": "Test subjects for Mocha.js",
-  "main": "lib/mocha_subject.js",
+  "description": "Test definitions for Mocha.js",
+  "main": "lib/mocha_define.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/burtcorp/mocha-subject.git"
+    "url": "git://github.com/burtcorp/mocha-define.git"
   },
   "keywords": [
     "testing",

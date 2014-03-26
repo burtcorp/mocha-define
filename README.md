@@ -1,18 +1,18 @@
-# Mocha subject
+# Mocha define
 
-Mocha subject is a small plugin for
+Mocha define is a small plugin for
 [Mocha.js](http://visionmedia.github.io/mocha/) that provides test
-subjects.
+definitions.
 
 ## Installation
 
 ```bash
-$ npm install mocha-subject --save-dev
+$ npm install mocha-define --save-dev
 ```
 
 ## Usage
 
-Require `mocha-subject` in the Mocha tests.
+Require `mocha-define` in the Mocha tests.
 
 This plugin defines two functions: `def` and `subject`.
 

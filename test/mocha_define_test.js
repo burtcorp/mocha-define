@@ -6,6 +6,10 @@ describe('mocha define', function() {
     this.object = { foo: 'bar' };
   });
 
+  it('exposes object', function() {
+    this.object.should.eql({foo: 'bar'});
+  });
+
   describe('#subject', function() {
     subject(function() {
       return this.object;
@@ -59,6 +63,56 @@ describe('mocha define', function() {
 
     it('is allowed', function() {
       this.subject.should.equal(this.foo);
+    });
+  });
+
+  describe('assignment', function() {
+    def('foo', function() {
+      return 'bar';
+    });
+
+    describe('nested', function() {
+      beforeEach(function() {
+        this.foo = 'BAR';
+      });
+
+      it('overrites definition', function() {
+        this.foo.should.equal('BAR');
+      });
+    });
+  });
+
+  describe('cache', function() {
+    def('random', function() {});
+
+    describe('def', function() {
+      var read = false;
+
+      def('random', function() {
+        if (read) {
+          throw new Error('should not read twice, but did');
+        } else {
+          read = true;
+        }
+
+        return 'random';
+      });
+
+      it('caches definition', function() {
+        this.random.should.equal('random');
+        this.random.should.equal('random');
+      });
+    });
+
+    describe('assignment', function() {
+      beforeEach(function() {
+        this.random = 'RANDOM';
+      });
+
+      it('caches definition', function() {
+        this.random.should.equal('RANDOM');
+        this.random.should.equal('RANDOM');
+      });
     });
   });
 });

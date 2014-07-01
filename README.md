@@ -1,8 +1,8 @@
 # Mocha define
 
 Mocha define is a small plugin for
-[Mocha.js](http://visionmedia.github.io/mocha/) that provides test
-definitions.
+[Mocha.js](http://visionmedia.github.io/mocha/) that provides lazy
+test definitions.
 
 ## Installation
 

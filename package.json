@@ -1,6 +1,6 @@
 {
   "name": "mocha-define",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Test definitions for Mocha.js",
   "main": "lib/mocha_define.js",
   "repository": {
